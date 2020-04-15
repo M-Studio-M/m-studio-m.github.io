@@ -195,60 +195,60 @@
         <div class="post-content">
             <p>视频讲解请移步B站观看：<a href="https://www.bilibili.com/video/BV1t54y1d7DW/" target="_blank" rel="noopener">视频链接</a></p>
 <h2 id="视频中没有讲到阴影，文章里会讲解，记得收藏点赞哦～"><a href="#视频中没有讲到阴影，文章里会讲解，记得收藏点赞哦～" class="headerlink" title="视频中没有讲到阴影，文章里会讲解，记得收藏点赞哦～"></a><strong>视频中没有讲到阴影，文章里会讲解，记得收藏点赞哦～</strong></h2><p>在Unity.cn和Connect提供演示项目的下载：<a href="https://github.com/M-Studio-M/2D-Universal-RP-Demo/tree/TutorialDemo" target="_blank" rel="noopener">项目链接</a></p>
-<p><strong>首选准备好我们的主角：Universal RP 的 Package 下载</strong><br><img src="/markdown/images/5e8ef38aedbc2a001fc6b71a" alt=""></p>
+<p><strong>首选准备好我们的主角：Universal RP 的 Package 下载</strong><br><img src="https://connect-cn-cdn-public-prd.unitychina.cn/h1/20200409/p/images/cca6a0ba-1cd8-4ca6-8caf-e294c944c156___2020_04_09___6.05.53.png" alt=""></p>
 <blockquote>
 <p>如果使用2018的小伙伴也不用担心，URP和之前的LWRP是一样的使用方法，后者升级后也包括URP的依赖</p>
 </blockquote>
 <ul>
-<li>安装好之后我们就需要为项目添加 Universal Render Pipeline 的 Pipeline Asset 和 2D Renderer 。<br><img src="/markdown/images/5e8ef577edbc2a2d7cde1c37" alt=""></li>
+<li>安装好之后我们就需要为项目添加 Universal Render Pipeline 的 Pipeline Asset 和 2D Renderer 。<br><img src="https://connect-cn-cdn-public-prd.unitychina.cn/h1/20200409/p/images/d759bad2-8647-433d-bf08-90efcc9ab094___2020_04_09___6.13.04.png" alt=""></li>
 <li>接下来我们将创建好的 2D Renderer 替换掉 Asset 中默认的 Renderer Data。</li>
 </ul>
-<p><img src="/markdown/images/5e8ef686edbc2a2d91c0e707" alt=""></p>
+<p><img src="https://connect-cn-cdn-public-prd.unitychina.cn/h1/20200409/p/images/47a763d1-d262-4888-9b5f-1f98063c9615___2020_04_09___6.17.48.png" alt=""></p>
 <ul>
-<li><p>接下来我们要将我们创建好的 2D URP 渲染 Asset 应用到我们的项目当中。选择 Edit - Project Setting - Graphic 然后选择我们创建的 Pipeline Asset 。<br><img src="/markdown/images/5e8ef70eedbc2a2d7cde1c64" alt=""></p>
+<li><p>接下来我们要将我们创建好的 2D URP 渲染 Asset 应用到我们的项目当中。选择 Edit - Project Setting - Graphic 然后选择我们创建的 Pipeline Asset 。<br><img src="https://connect-cn-cdn-public-prd.unitychina.cn/h1/20200409/p/images/2f978671-64ac-4848-a07a-ac5b25ecc94a___2020_04_09___6.20.36.png" alt=""></p>
 </li>
-<li><p>最后我们可以选择 Edit - Render Pipeline - Universal Render Pipeline - 2D Renderer 然后我们可以选择将当前场景Scene升级到URP或者将整个项目都升级到URP渲染。<br><img src="/markdown/images/5e8ef91eedbc2a2d83aa44e8" alt=""></p>
+<li><p>最后我们可以选择 Edit - Render Pipeline - Universal Render Pipeline - 2D Renderer 然后我们可以选择将当前场景Scene升级到URP或者将整个项目都升级到URP渲染。<br><img src="https://connect-cn-cdn-public-prd.unitychina.cn/h1/20200409/p/images/f866c352-29f0-47f9-8164-ebf5cfdde7b0___2020_04_09___6.23.09.png" alt=""></p>
 <p><strong>升级之后可能会遇到的情况是场景半黑半亮，或者伴随一些丑陋了粉色….</strong><br>这是因为材质发生了变化不能自动升级，需要我们手动操作来升级这些材质球，或者我们单独创建新的材质球应用diffuse或normal map这些特殊需求。</p>
 </li>
 </ul>
 <blockquote>
 <p>默认情况URP的基本材质就是 Sprite - Lit - Default 。可以单独创建或者直接选择默认的，如果没有发现这个材质，请点击右上角‘眼睛’的按钮即可找到。</p>
 </blockquote>
-<p><img src="/markdown/images/5e8eff94edbc2a2d83aa45f1" alt=""></p>
-<h2 id="至此你的场景应该是一片漆黑！（就不上图了也看不出来，哈哈）"><a href="#至此你的场景应该是一片漆黑！（就不上图了也看不出来，哈哈）" class="headerlink" title="至此你的场景应该是一片漆黑！（就不上图了也看不出来，哈哈）"></a><strong>至此你的场景应该是一片漆黑！（就不上图了也看不出来，哈哈）</strong></h2><p><strong>重点来了！添加2D灯光点亮我们的场景！</strong><br>有关2D灯光的类型其实不必过多讲解，大家可以自行添加各种各样的灯光来尝试就会熟悉如何使用了。在这里有一些需要我们注意的简单解释一下。<br><img src="/markdown/images/5e8f0289edbc2a001f9d2aba" alt=""></p>
+<p><img src="https://connect-cn-cdn-public-prd.unitychina.cn/h1/20200409/p/images/780e4424-4810-4bae-931a-c7866df8fbb9___2020_04_09___6.57.14.png" alt=""></p>
+<h2 id="至此你的场景应该是一片漆黑！（就不上图了也看不出来，哈哈）"><a href="#至此你的场景应该是一片漆黑！（就不上图了也看不出来，哈哈）" class="headerlink" title="至此你的场景应该是一片漆黑！（就不上图了也看不出来，哈哈）"></a><strong>至此你的场景应该是一片漆黑！（就不上图了也看不出来，哈哈）</strong></h2><p><strong>重点来了！添加2D灯光点亮我们的场景！</strong><br>有关2D灯光的类型其实不必过多讲解，大家可以自行添加各种各样的灯光来尝试就会熟悉如何使用了。在这里有一些需要我们注意的简单解释一下。<br><img src="https://connect-cn-cdn-public-prd.unitychina.cn/h1/20200409/p/images/b2b00219-e1f2-4623-b5aa-4dba41602ece___2020_04_09___7.09.32.png" alt=""></p>
 <blockquote>
 <p>添加各种光源后都要留意应用这个光效的图层</p>
 </blockquote>
-<p>使用 Freeform Light 的时候要记得<strong>一定先移动位置，后调整形状</strong>才能确保如果你加了阴影，能在正确的方向产生阴影效果。<br><img src="/markdown/images/5e8f047bedbc2a001f9d2b07" alt=""></p>
+<p>使用 Freeform Light 的时候要记得<strong>一定先移动位置，后调整形状</strong>才能确保如果你加了阴影，能在正确的方向产生阴影效果。<br><img src="https://connect-cn-cdn-public-prd.unitychina.cn/h1/20200409/p/images/e49a58b0-670b-42a4-bc4a-9b4dd857cbdc___2020_04_09___7.14.13.png" alt=""></p>
 <ul>
 <li>在渲染层级的问题上有一个小组件在2D Animation骨骼人物方面非常好用，隆重介绍Sorting Group！</li>
 </ul>
-<p>因为骨骼是每个部分独立的sorting layer。所以在调整与场景中的遮挡关系是非常麻烦。如果用了Sorting Group那么就可以按一个整体为单位调整layer层级。<br><img src="/markdown/images/5e8f06a0edbc2a00201fff43" alt=""></p>
-<h2 id="如何为场景物体添加阴影效果"><a href="#如何为场景物体添加阴影效果" class="headerlink" title="如何为场景物体添加阴影效果"></a><strong>如何为场景物体添加阴影效果</strong></h2><p>这里我们要使用的是 Shadow Caster 2D 组件。<br><img src="/markdown/images/5e8f0704edbc2a00201fff52" alt=""> </p>
+<p>因为骨骼是每个部分独立的sorting layer。所以在调整与场景中的遮挡关系是非常麻烦。如果用了Sorting Group那么就可以按一个整体为单位调整layer层级。<br><img src="https://connect-cn-cdn-public-prd.unitychina.cn/h1/20200409/p/images/546801cb-fd20-4be4-ae20-db0fa0e5d632___2020_04_09___7.27.16.png" alt=""></p>
+<h2 id="如何为场景物体添加阴影效果"><a href="#如何为场景物体添加阴影效果" class="headerlink" title="如何为场景物体添加阴影效果"></a><strong>如何为场景物体添加阴影效果</strong></h2><p>这里我们要使用的是 Shadow Caster 2D 组件。<br><img src="https://connect-cn-cdn-public-prd.unitychina.cn/h1/20200409/p/images/7a2041f6-2027-4bb9-aa12-29f502a62231___2020_04_09___7.28.03.png" alt=""> </p>
 <ul>
 <li>在添加了这个组件之后，我们可以点击编辑的按钮，然后可以编辑阴影的轮廓点。</li>
 </ul>
-<p><img src="/markdown/images/5e8f0814edbc2a00201fff78" alt=""></p>
+<p><img src="https://connect-cn-cdn-public-prd.unitychina.cn/h1/20200409/p/images/a6ad70a4-992b-41ac-b26a-a356cce6d9d2___2020_04_09___7.31.57.png" alt=""></p>
 <ul>
 <li>我们发现并没有产生任何的阴影效果，这是因为我们的灯光没有调整产生阴影的相关参数，我们可以<strong>选择要产生阴影的光源</strong>，然后调整 Volume Opacity 之后就可以看到有关 Shadow 阴影的相关参数了，适当调整后可以得到如图的效果。（也可以选择阴影投射的layer）</li>
 </ul>
-<p><img src="/markdown/images/5e8f0943edbc2a0020a50d1c" alt=""></p>
+<p><img src="https://connect-cn-cdn-public-prd.unitychina.cn/h1/20200409/p/images/e5c65bcc-9262-493c-8c49-4abb2a63595b___2020_04_09___7.37.35.png" alt=""></p>
 <blockquote>
 <p>关于阴影的具体内容，请大家查看官方的手册内容：<a href="https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@7.1/manual/2DShadows.html" target="_blank" rel="noopener">官方手册</a></p>
 </blockquote>
-<p><img src="/markdown/images/5e8f09f6edbc2a001f9d2bc9" alt=""></p>
+<p><img src="https://connect-cn-cdn-public-prd.unitychina.cn/h1/20200409/p/images/d594d356-9879-422d-8274-8e3d186f1839___2020_04_09___7.41.29.png" alt=""></p>
 <h2 id="如何开启和设置集成在URP中的-Post-processing-效果"><a href="#如何开启和设置集成在URP中的-Post-processing-效果" class="headerlink" title="如何开启和设置集成在URP中的 Post processing 效果"></a><strong>如何开启和设置集成在URP中的 Post processing 效果</strong></h2><ul>
 <li>首先要在场景中添加 对应对Volume 然后点击 new 新建 Post processing data 对应各种视觉效果描述文件。</li>
 </ul>
-<p><img src="/markdown/images/5e8f0c83edbc2a002020000e" alt=""></p>
+<p><img src="https://connect-cn-cdn-public-prd.unitychina.cn/h1/20200409/p/images/27a421aa-3916-47c7-b5e9-d18da3a5062f___2020_04_09___7.51.19.png" alt=""></p>
 <ul>
 <li>随后我们可以像以前的版本一样添加各种个样的视觉效果啦！<strong>但是但是可但是，场景并没有任何变化！</strong></li>
 </ul>
-<p><img src="/markdown/images/5e8f0e39edbc2a001f3a17f8" alt=""></p>
+<p><img src="https://connect-cn-cdn-public-prd.unitychina.cn/h1/20200409/p/images/4f9184c7-af4f-4e21-80c4-4d670efa59e0___2020_04_09___7.58.34.png" alt=""></p>
 <ul>
 <li>原因是我们没有让我们的 Main Camera <strong>启用</strong> Post processing 的效果，所以选中主渲染摄像机并启用这个功能。</li>
 </ul>
-<p><img src="/markdown/images/5e8f0f1eedbc2a001f9d2d0f" alt=""></p>
+<p><img src="https://connect-cn-cdn-public-prd.unitychina.cn/h1/20200409/p/images/a4597b3b-d969-4018-9be1-7a3f26c2d950___2020_04_09___8.02.58.png" alt=""></p>
 <h2 id="至此所有URP在2D场景中的使用方法就介绍好了，更多详细的内容鼓励大家多多查看官方的手册指南：官方手册"><a href="#至此所有URP在2D场景中的使用方法就介绍好了，更多详细的内容鼓励大家多多查看官方的手册指南：官方手册" class="headerlink" title="至此所有URP在2D场景中的使用方法就介绍好了，更多详细的内容鼓励大家多多查看官方的手册指南：官方手册"></a><strong>至此所有URP在2D场景中的使用方法就介绍好了，更多详细的内容鼓励大家多多查看官方的手册指南：<a href="https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@7.1/manual/index.html" target="_blank" rel="noopener">官方手册</a></strong></h2><p>麦扣的美术能力有限，相信大家一定可以将你的游戏画面做到质的飞跃的！感谢大家的支持！<strong>记得点赞+收藏+评论哦～</strong></p>
 
         </div>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Michael Wang">
+
+
+
+    <meta name="description" content="Unity Trainer">
+
+
+
+<title>Unity游戏云 | M-Studio</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Michael&#39;blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Michael&#39;blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">Unity游戏云</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Michael Wang</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">July 12, 2020&nbsp;&nbsp;14:13:21</a>
+                        </span>
+                    
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h1 id="Unity-游戏项目"><a href="#Unity-游戏项目" class="headerlink" title="Unity 游戏项目"></a>Unity 游戏项目</h1><h2 id="操作场景"><a href="#操作场景" class="headerlink" title="操作场景"></a>操作场景</h2><p>以 Unity Editor 2019.3 版本为例，本文介绍使用小游戏联机对战引擎 MGOBE API 快速接入对战平台的方法，实现一个 MGOBE 的 HelloworldUnity。</p>
+<h2 id="前提条件"><a href="#前提条件" class="headerlink" title="前提条件"></a>前提条件</h2><ul>
+<li>已在小游戏联机对战引擎控制台创建小游戏实例，并开通联机对战服务。</li>
+<li>已获取游戏 gameID 和 secretKey。</li>
+</ul>
+<h2 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h2><ol>
+<li><p>打开 Unity Hub，创建一个小游戏项目。如下图所示：</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1get4lqc9haj31bl0u047r.jpg" alt=""></p>
+</li>
+<li><p>点击【创建】，进入项目开发界面：</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1get4ni1sl2j31c00u0tfs.jpg" alt=""></p>
+</li>
+</ol>
+<h2 id="导入-Mgobe-Package"><a href="#导入-Mgobe-Package" class="headerlink" title="导入 Mgobe Package"></a>导入 Mgobe Package</h2><ol>
+<li><p>将 com.unity.Mgobe.unitypackage 拖入 editor 中的 Project 栏，点击【import】进行 package 导入。 单击进入<a href="https://unity.cn/mgobe" target="_blank" rel="noopener">Package 下载</a>页面</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1get5f4ycq5j31bu0n87ba.jpg" alt=""></p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1get5ug7wg4j30yj0u0tip.jpg" alt=""></p>
+</li>
+<li><p>在 Assets 目录下创建 “Scripts” 文件夹，并新建 Scripts/main.cs 文件</p>
+</li>
+<li><p>在 Hierachy 视图下，右击 SampleScene，选中 GameObject -&gt; CreateEmpty，新建一个空的游戏对象</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gf4jabgegvj30k00eojs7.jpg" alt=""></p>
+</li>
+<li><p>选中新建的 GameObject，拖动 main.cs，添加为该 GameObject 的 Component</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gf4jcjjhomj31c00u010v.jpg" alt=""></p>
+</li>
+<li><p>参考以下示例代码，将 mgobe package 导入 main.cs</p>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">using Packages.com.unity.mgobe.Runtime.src;</span><br><span class="line">using Packages.com.unity.mgobe.Runtime.src.SDK;</span><br><span class="line">using Lagame;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="调用-API"><a href="#调用-API" class="headerlink" title="调用 API"></a>调用 API</h2><ol>
+<li>在 main.cs 中输入以下代码，完成 SDK 初始化，获得 room 实例</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">GameInfoPara gameInfo &#x3D; new GameInfoPara &#123;</span><br><span class="line">    &#x2F;&#x2F; 替换 为控制台上的“游戏ID”</span><br><span class="line">    GameId &#x3D; &quot;XXXXXXXXXXXXXX&quot;,</span><br><span class="line">    &#x2F;&#x2F; 玩家 openId</span><br><span class="line">    OpenId &#x3D; &quot;openid_123_test&quot;,</span><br><span class="line">    &#x2F;&#x2F;替换 为控制台上的“游戏Key”</span><br><span class="line">    SecretKey &#x3D; &quot;XXXXXXXXXXXXXX&quot;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">ConfigPara config &#x3D; new ConfigPara &#123;</span><br><span class="line">    &#x2F;&#x2F; 替换 为控制台上的“域名”</span><br><span class="line">    Url &#x3D; &quot;XXXXXXX.wxlagame.com&quot;,</span><br><span class="line">    ReconnectMaxTimes &#x3D; 5,</span><br><span class="line">    ReconnectInterval &#x3D; 1000,</span><br><span class="line">    ResendInterval &#x3D; 1000,</span><br><span class="line">    ResendTimeout &#x3D; 10000</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 初始化监听器 Listener</span><br><span class="line">  Listener.Init (gameInfo, config, (ResponseEvent eve) &#x3D;&gt; &#123;</span><br><span class="line">      if (eve.Code &#x3D;&#x3D; 0) &#123;</span><br><span class="line">          Debug.Log (&quot;初始化成功&quot;);</span><br><span class="line">    &#x2F;&#x2F; 初始化成功之后才能调用其他 API</span><br><span class="line">    var room &#x3D; new Room(null);</span><br><span class="line">    &#x2F;&#x2F; ...</span><br><span class="line">  &#125;</span><br><span class="line">  &#x2F;&#x2F; 初始化广播回调事件</span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>修改初始化回调函数，调用 room 对象的查询房间接口（getRoomDetail），即可验证是否成功接入对战平台。示例代码如下所示：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"> &#x2F;&#x2F; 初始化监听器 Listener</span><br><span class="line">Listener.Init (gameInfo, config, (ResponseEvent eve) &#x3D;&gt; &#123;</span><br><span class="line">    if (eve.Code &#x3D;&#x3D; 0) &#123;</span><br><span class="line">        Debug.Log (&quot;初始化成功&quot;);</span><br><span class="line">        &#x2F;&#x2F; 初始化成功之后才能调用其他 API</span><br><span class="line">        &#x2F;&#x2F;查询玩家自己的房间</span><br><span class="line">        var room &#x3D; new Room (null);</span><br><span class="line">        room.GetRoomDetail ((ResponseEvent e) &#x3D;&gt; &#123;</span><br><span class="line">            if (e.Code !&#x3D; 0 &amp;&amp; e.Code !&#x3D; 20011) &#123;</span><br><span class="line">                Debug.Log (&quot;初始化失败&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">            &#x2F;&#x2F; Type type &#x3D; e.data.GetType();</span><br><span class="line">            &#x2F;&#x2F; Debug.LogFormat (&quot;查询成功: &#123;0&#125;&quot;, type);</span><br><span class="line">            Debug.Log (&quot;查询成功&quot;);</span><br><span class="line">            if (e.Code &#x3D;&#x3D; 20011) &#123;</span><br><span class="line">                Debug.Log (&quot;玩家不在房间内&quot;);</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                &#x2F;&#x2F; 玩家已在房间内</span><br><span class="line">                var res &#x3D; (GetRoomByRoomIdRsp) e.Data;</span><br><span class="line">                Debug.LogFormat (&quot;房间名 &#123;0&#125;&quot;, res.RoomInfo.Name);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        Debug.LogFormat (&quot;初始化失败: &#123;0&#125;&quot;, eve.Code);</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;&#x2F; 初始化广播回调事件</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>编译并运行项目，控制台中输出“查询成功”信息即表示接入成功</li>
+</ol>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>Michael Wang</span>
+                    </p>
+                
+                
+                
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+            
+            <a class="next" rel="next" href="/2020/05/25/Unity%20Student%20Plan%20%E7%94%B3%E8%AF%B7%E6%8C%87%E5%8D%97!/">Unity Student Plan 申请指南！</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Michael Wang | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+</html>
